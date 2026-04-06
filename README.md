@@ -3,7 +3,7 @@
 This repository provides a stable, user-space installation of **GROMACS 2024.4** with **CUDA 11.8** support, specifically designed for DGX servers where system updates frequently break dependencies.
 
 ## Steps
-- **Clone repo** git clone https://github.com/Alcartez/Gromacs_2024.4_stable_installer.git
+- **Clone repo** ``git clone https://github.com/Alcartez/Gromacs_2024.4_stable_installer.git``
 - ``cd Gromacs_2024.4_stable_installer``
 - **Install Conda Engine** using ``bash install_conda.sh``
 - **Use the Conda Engine to initiate the environment**
