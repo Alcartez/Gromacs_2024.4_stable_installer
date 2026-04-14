@@ -7,4 +7,4 @@ dependencies:
   - cmake
   - cuda-version=11.8
   - cudatoolkit=11.8.0
-  - gromacs=2024.4=cuda
+  - gromacs=2024.4=*cuda*
