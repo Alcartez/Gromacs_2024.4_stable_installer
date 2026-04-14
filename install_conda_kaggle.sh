@@ -1,21 +1,17 @@
 #!/bin/bash
 set -e 
 
-# 1. Setup paths (Using /kaggle/working allows for persistence if needed)
-export MAMBA_ROOT_PREFIX=/kaggle/working/micromamba
-export BIN_DEST=/usr/local/bin
-
-echo "--- Installing Micromamba ---"
+echo "Installing Micromamba..."
 curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
-chmod +x bin/micromamba
-mv bin/micromamba $BIN_DEST/micromamba
+mv bin/micromamba /usr/local/bin/micromamba
 
-# 2. Initialize shell (Crucial for 'micromamba activate' to work later)
-micromamba shell init -s bash -p $MAMBA_ROOT_PREFIX
-source ~/.bashrc
+export MAMBA_ROOT_PREFIX=/opt/micromamba
 
-echo "--- Creating GROMACS environment ---"
-# -p specifies the path directly, which is often easier on Kaggle
-micromamba create -y -p $MAMBA_ROOT_PREFIX/envs/gromacs -f environment.yml
+# --- THE FIX FOR THE CUDA ERROR ---
+# This forces the solver to recognize CUDA 11.8 exists on the Kaggle machine
+export CONDA_OVERRIDE_CUDA="11.8"
 
-echo "--- Installation Finished ---"
+echo "Creating GROMACS environment..."
+micromamba create -y -f environment.yml
+
+echo "DONE."
