@@ -1,1 +1,10 @@
-
+name: gmx2024_cuda
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - cmake
+  - cuda-version=11.8
+  - cudatoolkit=11.8.0
+  - gromacs=2024.4=cuda
