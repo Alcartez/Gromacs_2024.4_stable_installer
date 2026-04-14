@@ -33,7 +33,7 @@ Run the following commands in a notebook cell to set up the environment:
 
 ```bash
 # Clone the installer repository
-!git clone [https://github.com/Alcartez/Gromacs_2024.4_stable_installer.git](https://github.com/Alcartez/Gromacs_2024.4_stable_installer.git)
+!git clone https://github.com/Alcartez/Gromacs_2024.4_stable_installer.git
 %cd Gromacs_2024.4_stable_installer
 
 # Run the Kaggle-optimized installation script
