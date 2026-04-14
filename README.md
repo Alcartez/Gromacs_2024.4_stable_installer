@@ -23,7 +23,7 @@ Explicit Environment is added just in case anything breaks.
 
 This guide explains how to install and run GROMACS 2024.4 with CUDA support on Kaggle using Micromamba.
 
-## 🚀 Quick Start
+## Getting Started
 
 ### 1. Enable GPU Accelerator
 In your Kaggle Notebook, go to **Settings** (right sidebar) -> **Accelerator** and select **GPU T4 x2** or **P100**. This is required for the drivers to be visible to GROMACS.
